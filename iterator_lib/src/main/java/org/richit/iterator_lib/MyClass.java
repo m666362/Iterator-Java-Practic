@@ -17,7 +17,16 @@ public class MyClass {
 
     public static void main(String[] args) {
         iteratorfun();
+        implementingIterable();
         heading("Programme Ended");
+    }
+
+    private static void implementingIterable() {
+        heading( "implementingIterable" );
+        UrlsLibrary urlsLibrary = new UrlsLibrary();
+        for (String url:urlsLibrary){
+            System.out.println(url);
+        }
     }
 
     private static void iteratorfun() {
