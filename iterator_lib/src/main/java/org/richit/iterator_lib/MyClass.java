@@ -1,5 +1,11 @@
 package org.richit.iterator_lib;
 
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
+import javax.swing.text.html.HTMLDocument;
+
 public class MyClass {
 
     static String dot = "----------------";
@@ -10,7 +16,33 @@ public class MyClass {
     }
 
     public static void main(String[] args) {
-        heading("Programme Started");
+        iteratorfun();
+        heading("Programme Ended");
+    }
+
+    private static void iteratorfun() {
+        heading( "iteratorfun" );
+        List<String> animals = new ArrayList<>(  );
+        animals.add( "dog" );
+        animals.add( "cat" );
+        animals.add( "Mouse" );
+        animals.add( "Lion" );
+        animals.add( "Tiger" );
+
+        Iterator<String> iterator = animals.iterator();
+        while (iterator.hasNext()){
+            String value = iterator.next();
+            if(value.equals( "Mouse" )){
+                iterator.remove();
+            }
+            System.out.println(value);
+        }
+
+        System.out.println();
+        heading( "orginal" );
+        for (String animal:animals){
+            System.out.println(animal);
+        }
     }
 
 }
