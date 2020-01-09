@@ -1,0 +1,2 @@
+include ':app', ':iterator_lib'
+rootProject.name='Iterators Java Practice'
