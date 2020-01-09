@@ -24,8 +24,9 @@ public class MyClass {
     private static void implementingIterable() {
         heading( "implementingIterable" );
         UrlsLibrary urlsLibrary = new UrlsLibrary();
-        for (String url:urlsLibrary){
-            System.out.println(url);
+        for (String html:urlsLibrary){
+            System.out.println(html.length());
+            System.out.println(html);
         }
     }
 
